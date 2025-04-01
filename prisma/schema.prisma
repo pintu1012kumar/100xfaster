@@ -9,7 +9,7 @@ datasource db {
 
 model Clientdetails {
   id          String   @id @default(uuid())
-  name        String
+  name        String @unique
   age         String   
   gender      String   @default("male")
   bodyPart    String

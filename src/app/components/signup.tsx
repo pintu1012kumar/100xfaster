@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation"; // Next.js 13+ ke liye
-import { Label } from "../components/ui/label";
-import { Input } from "../components/ui/input";
+import { Label } from "./ui/label";
+import { Input } from "./ui/input";
 import { cn } from "@/app/lib/utils";
 
 export function SignupFormDemo() {
