@@ -1,18 +1,19 @@
 import { NextResponse } from "next/server";
 import prisma from "@/app/lib/prisma";
 
-export async function GET(req: Request, { params }: { params: { id: string } }) {
+export async function GET(req: Request) {
   try {
-    const { id } = params;
+    const { searchParams } = new URL(req.url);
+    const name = searchParams.get("name"); // Extract name from URL query params
 
-    // Validate ID
-    if (!id) {
-      return NextResponse.json({ error: "User ID is required!" }, { status: 400 });
+    // Validate Name
+    if (!name) {
+      return NextResponse.json({ error: "User name is required!" }, { status: 400 });
     }
 
-    // Fetch full user data
+    // Fetch user by name
     const user = await prisma.clientdetails.findUnique({
-      where: { id },
+      where: { name },
     });
 
     // If user not found
@@ -21,9 +22,9 @@ export async function GET(req: Request, { params }: { params: { id: string } }) 
     }
 
     // Return only required fields
-    const { name, bodyPart } = user;
+    const { age } = user;
 
-    return NextResponse.json({ name, bodyPart }, { status: 200 });
+    return NextResponse.json({ name, age }, { status: 200 });
   } catch (error) {
     console.error("Error fetching user details:", error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
