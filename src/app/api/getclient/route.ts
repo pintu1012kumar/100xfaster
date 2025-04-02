@@ -22,9 +22,9 @@ export async function GET(req: Request) {
     }
 
     // Return only required fields
-    const { age } = user;
+    const { age,bodyPart } = user;
 
-    return NextResponse.json({ name, age }, { status: 200 });
+    return NextResponse.json({ name, age,bodyPart }, { status: 200 });
   } catch (error) {
     console.error("Error fetching user details:", error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
