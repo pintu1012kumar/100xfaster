@@ -1,7 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import Dashboard from "../pages/Dashboard";
 
 export default function Home() {
   const router = useRouter();
