@@ -52,7 +52,7 @@ export function SignupFormDemo() {
         Welcome to <span className="text-blue-400">100xfaster</span>
       </h2>
       <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300">
-        Login to aceternity if you can because we don&apos;t have a login flow yet
+      Fill the form & save your time by allowing you to book doctor appointments from the comfort of your home.
       </p>
 
       <form className="my-8" onSubmit={handleSubmit}>

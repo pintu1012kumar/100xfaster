@@ -5,42 +5,42 @@ import Image from "next/image";
 
 const content = [
   {
-    title: "Collaborative Editing",
+    title: "1️⃣ How to use this app?",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      " Using this app is very simple! After fill the form enter your name in the input box and click on Check Your Time. The system will then fetch your appointment details and display the relevant information. This way, you can easily check your booking status without having to visit the clinic.",
     content: (
       <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Collaborative Editing
+         How to use this app?
       </div>
     ),
   },
   {
-    title: "Real time changes",
+    title: "2️⃣ Benefits of this app !!",
     description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+      "Our app is designed to save your time by allowing you to book doctor appointments from the comfort of your home. Instead of waiting in long queues at clinics or hospitals, you can simply enter your details, confirm your appointment, and arrive at the scheduled time. This reduces waiting time and ensures a smooth experience.",
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
-      heyy
+      Benefits of this app !!
       </div>
     ),
   },
   {
-    title: "Version control",
+    title: "3️⃣ Will I get a reminder for my appointment?",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Yes, we send automated confirmation messages and reminders before your scheduled appointment time. This ensures that you don’t forget about your booking. You will receive a notification via SMS or email (depending on your selected preference) so that you can plan your visit accordingly and never miss an appointment.",
     content: (
       <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] text-white">
-        Version control
+       Will I get a reminder for my appointment?
       </div>
     ),
   },
   {
-    title: "Running out of content",
+    title: "4️⃣ Can I cancel or reschedule my appointment?",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      " Absolutely! We understand that plans can change. If you need to cancel or reschedule your appointment, simply visit the My Appointments section in the app, choose your current booking, and modify it according to your availability. You can also contact the clinic for further assistance if needed.",
     content: (
       <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Running out of content
+        Can I cancel or reschedule my appointment?
       </div>
     ),
   },
