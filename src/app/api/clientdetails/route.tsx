@@ -2,6 +2,10 @@ import { NextResponse } from "next/server";
 import prisma from "@/app/lib/prisma";
 import { corsHeaders } from "@/app/lib/cors";
 
+export async function OPTIONS() {
+  return NextResponse.json({}, { headers: corsHeaders() });
+}
+
 export async function POST(req: Request) {
   try {
     const { name, age, gender, bodyPart, description } = await req.json();
@@ -9,7 +13,7 @@ export async function POST(req: Request) {
     if (!name || !age || !bodyPart) {
       return NextResponse.json(
         { error: "Name, age, and bodyPart are required!" },
-        { status: 400 }
+        { status: 400, headers: corsHeaders() }
       );
     }
 
@@ -19,7 +23,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json(
       { message: "Client details stored successfully!", data: newClient },
-      { status: 201 }
+      { status: 201, headers: corsHeaders() }
     );
   } catch (error) {
     console.error("Error storing client details:", error);
