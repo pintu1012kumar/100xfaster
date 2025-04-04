@@ -10,7 +10,7 @@ export async function OPTIONS() {
   });
 }
 
-export async function POST() {
+export async function POST(req: Request) {
   try {
     const { name, age, gender, bodyPart, description } = await req.json();
 
