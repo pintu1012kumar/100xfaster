@@ -39,10 +39,10 @@ export function SignupFormDemo() {
         console.log("User registered successfully!");
         router.push("/home"); // Home page pe redirect
       } else {
-        console.error("Signup failed");
+        console.error("Submission failed");
       }
     } catch (error) {
-      console.error("Error during signup:", error);
+      console.error("Error during submission:", error);
     }
   };
 
@@ -85,7 +85,7 @@ export function SignupFormDemo() {
           className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
           type="submit"
         >
-          Sign up &rarr;
+          Book your appointment &rarr;
           <BottomGradient />
         </button>
 
