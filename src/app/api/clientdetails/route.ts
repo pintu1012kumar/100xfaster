@@ -3,14 +3,14 @@ import prisma from "@/app/lib/prisma";
 import { corsHeaders } from "@/app/lib/cors";
 
 // ✅ Fix for OPTIONS
-export async function OPTIONS(req: Request) {
+export async function OPTIONS() {
   return new Response(null, {
     status: 204,
     headers: corsHeaders(),
   });
 }
 
-export async function POST(req: Request) {
+export async function POST() {
   try {
     const { name, age, gender, bodyPart, description } = await req.json();
 
