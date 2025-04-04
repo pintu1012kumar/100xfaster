@@ -2,10 +2,10 @@
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function Statusbar() {
+export default function StatusbarClient() {
   const searchParams = useSearchParams();
   const name = searchParams.get("name");
-  
+
   const [bodyPart, setBodyPart] = useState<string | null>(null);
   const [doctorName, setDoctorName] = useState<string | null>(null);
   const [error, setError] = useState("");
@@ -22,7 +22,7 @@ export default function Statusbar() {
             setDoctorName(null);
           } else {
             setBodyPart(data.bodyPart);
-            setDoctorName(data.doctorName); // Assuming API returns doctorName
+            setDoctorName(data.doctorName);
           }
         })
         .catch(() => setError("Failed to fetch user data"))
@@ -55,9 +55,7 @@ export default function Statusbar() {
             We noticed an issue with your{" "}
             <span className="text-yellow-400">{bodyPart}</span>.
           </p>
-          <p>
-            Our expert team is working to ensure you get the best care.
-          </p>
+          <p>Our expert team is working to ensure you get the best care.</p>
           <p>
             Your doctor,{" "}
             <span className="text-green-400">{doctorName}</span>, is ready to
