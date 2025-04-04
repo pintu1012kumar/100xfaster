@@ -2,9 +2,12 @@ import { NextResponse } from "next/server";
 import prisma from "@/app/lib/prisma";
 import { corsHeaders } from "@/app/lib/cors";
 
-// Preflight handler (important for POST from forms or JS fetch)
-export async function OPTIONS() {
-  return NextResponse.json({}, { status: 204, headers: corsHeaders() });
+// ✅ Fix for OPTIONS
+export async function OPTIONS(req: Request) {
+  return new Response(null, {
+    status: 204,
+    headers: corsHeaders(),
+  });
 }
 
 export async function POST(req: Request) {
