@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import prisma from "@/app/lib/prisma";
+import { corsHeaders } from "@/app/lib/cors";
 
 export async function GET(req: Request) {
   try {
@@ -23,6 +24,6 @@ export async function GET(req: Request) {
 
   } catch (error) {
     console.error("Error fetching user details:", error);
-    return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+    return NextResponse.json({ error: "Internal Server Error" }, { status: 500, headers: corsHeaders() });
   }
 }
