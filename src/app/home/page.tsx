@@ -14,6 +14,11 @@ export default function Home() {
     }
   };
 
+
+  const handleRedirect = () => {
+    router.push('/');
+  };
+
   return (
 
     <div>
@@ -45,7 +50,11 @@ export default function Home() {
       >
         Check Your Scheduled Time
       </button>
+      <div className="text-center"><button className="text-blue-600 font-bold" onClick={handleRedirect}>
+      Go to home
+    </button></div>
     </div>
+  
   </div>
     </div>
   

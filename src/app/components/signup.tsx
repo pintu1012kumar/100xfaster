@@ -49,6 +49,10 @@ export function SignupFormDemo() {
     }
   };
 
+  const handleRedirect = () => {
+    router.push('/home');
+  };
+
   return (
     <div className="shadow-input mx-auto w-full max-w-md rounded-none bg-white p-4 md:rounded-2xl md:p-8 dark:bg-black">
       <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
@@ -136,6 +140,11 @@ export function SignupFormDemo() {
           {isSubmitting ? "Booking..." : "Book your appointment →"}
           <BottomGradient />
         </button>
+         
+        <div className=" mt-2 text-center">~ If your appointment is already booked <button className="text-blue-600 font-bold" onClick={handleRedirect}>
+      click here
+    </button>
+     </div>
 
         <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
       </form>

@@ -7,11 +7,15 @@ import { StickyScrollRevealDemo } from "./components/scrollbar";
 export default function Home() {
   return (
     <div>
-      <Dashboard/>
+      
       <div>
+      <Dashboard/>
       <SignupFormDemo/>  
-      <StickyScrollRevealDemo/>
       </div>
+      <StickyScrollRevealDemo/>
+      
+     
+     
      
     </div>
   );
